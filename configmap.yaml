@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: myconfig
+    namespace: default
+data:
+    key: ENC[AES256_GCM,data:H13FOrM=,iv:FQzr9Qcplopqk9pfq6kmvhoOBjCVJoubxW3GPmdSrXs=,tag:wiwBoxosljfgPRosHeToJg==,type:str]
+    something: ENC[AES256_GCM,data:bgTjEMhlfurL,iv:pRDZSmsQN16rpUAmNr0rzeBbRdO94HwodOeB24UhXmI=,tag:4vrqzvSJWXAhY4Anr2Sx1A==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv:
+        - vault_url: https://oskuexamplevault.vault.azure.net
+          name: sops-key
+          version: 868e258215c74236af2d57fe6ec2cfb5
+          created_at: "2024-08-05T21:14:45Z"
+          enc: FZ0VkZ5NT2KjbCTaDp6g4-4qjEXuP2eyPP6DbLiFmUe0iIVy0Nj6i1shKqxSVVHHKoOSpaUv6cVeQNrRH7UubyHDMT3PfCtf6cRjPWpbqIFvdwRKGToIIb-8bhm_QWrgEBurzqKTTR7BcTp3J-xG4vRAZM3730W-kRnJ4Mf5G4unuXg7U8bwyutVa1LZUDjVQQ7dpb_-b2rLvl4qs_N5npQ8ESPg_C_7THItlixjOWtT7cicyCGer7asDkke9Z4yLGg2GHODjlEenvd7OExwRoxdCDM_twvh153W-lRHTjZU6j2Qb43c4wwb9vcUdhhdZ-UULEFBlGk04gn3pWsvxw
+    hc_vault: []
+    age: []
+    lastmodified: "2024-08-05T21:14:47Z"
+    mac: ENC[AES256_GCM,data:jxS8KEV8Z/zeGfwDwL+v5IVVk8ru4w41YjPXGLI5HKiJmqNpDesui9NxsqxzeRaHYVWyLqw2EX2DmNBQSGIn5xh92WUBYbB14Dli9o4eDga1ThmMe1wGAVzrXVNJ1+jcmrBhtTRHGp5HbCulAgNlNltMscuN3nRI9/lKAjxOZB0=,iv:Ix1RF2p6wnYmKG4ggV/Ybxn493UqRQ2ItqTihcg6cDw=,tag:IHZJXcWc8uqHeBPjYq4hPA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.9.0

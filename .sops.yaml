@@ -1,0 +1,4 @@
+creation_rules:
+  - encrypted_regex: "^(data|stringData)$"
+    path_regex: '.*\.yaml$'
+    azure_keyvault: https://oskuexamplevault.vault.azure.net/keys/sops-key/868e258215c74236af2d57fe6ec2cfb5
